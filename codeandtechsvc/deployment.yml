@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: codeandtech
+spec:
+  replicas: 2 # tells deployment to run 2 pods matching the template
+  selector:
+    matchLabels:
+      app: codeandtech
+  template: # create pods using pod definition in this template
+    metadata:
+      labels:
+        app: codeandtech
+    spec:
+      containers:
+      - name: gs-spring-boot-docker
+        image: shivaramani/codeandtech
+        ports:
+        - containerPort: 8090
