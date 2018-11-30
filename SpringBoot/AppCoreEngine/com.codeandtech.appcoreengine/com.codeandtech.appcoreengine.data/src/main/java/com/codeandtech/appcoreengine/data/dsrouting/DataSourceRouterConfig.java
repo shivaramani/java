@@ -32,10 +32,10 @@ public class DataSourceRouterConfig{
 
     public DataSource appcoreengineDataSource(){
         
-        String url = environment.getProperty("spring.framework.dataource.url");
-        String username = environment.getProperty("spring.framework.dataource.username");
-        String password = environment.getProperty("spring.framework.dataource.password");
-        String driverClassName = environment.getProperty("spring.framework.dataource.driverClassName");
+        String url = environment.getProperty("spring.framework.datasource.url");
+        String username = environment.getProperty("spring.framework.datasource.username");
+        String password = environment.getProperty("spring.framework.datasource.password");
+        String driverClassName = environment.getProperty("spring.framework.datasource.driverClassName");
 
         DataSourceBuilder dataSourceBuilder = DataSourceBuilder.create();
         dataSourceBuilder.driverClassName(driverClassName).url(url).username(username).password(password);
